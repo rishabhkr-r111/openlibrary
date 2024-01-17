@@ -78,6 +78,7 @@ $def render_carousel_cover(book, lazy, layout):
     <div class="book-cta">
       $:macros.LoanStatus(book, work_key=work_key, listen=False, secondary_action=secondary_action)
     </div>
+      $:render_template("my_books/dropper", book, async_load=True)
   </div>
 
 $if test or (books and len(books) >= min_books):
